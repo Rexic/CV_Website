@@ -34,9 +34,10 @@
 </template>
 
 <script>
-import ImpactReport from "/src/assets/ImpactReport.png";
+import ImpactReport from "/src/assets/Impact_Desc.png";
 import PerformersWorkshop from "/src/assets/PerformersWorkshop.png";
-import OGA from "/src/assets/OGA.png";
+import OGA from "/src/assets/OGA_Desc.png";
+import VueWebsite from "/src/assets/VueWebsite.png";
 
 export default {
   name: "WorkHistory",
@@ -62,6 +63,12 @@ export default {
           image: PerformersWorkshop,
           url: "https://theperformersworkshop.co.nz/",
         },
+        {
+          title: "This Website",
+          description: "",
+          image: VueWebsite,
+          url: "",
+        },
       ],
     };
   },
@@ -85,17 +92,17 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
 /* Card */
 .project-card {
   background: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  display: flex;
+  display: grid;
   flex-direction: column;
   transition: transform 0.2s ease;
 }
@@ -144,7 +151,7 @@ export default {
 .links a {
   display: inline-block;
   padding: 6px 12px;
-  background-color: #12cde5ff;
+  background-color: rgb(18, 29, 229);
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
