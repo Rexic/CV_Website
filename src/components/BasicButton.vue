@@ -44,8 +44,8 @@ export default {
 
 .basic-button {
   padding: 10px 20px;
-  border: 2px solid #0050ff;
-  color: #0050ff;
+  border: 2px solid #590069a3;
+  color: #590069a3;
   background: white;
   border-radius: 6px;
   font-weight: 600;
@@ -54,7 +54,7 @@ export default {
 }
 
 .basic-button:hover {
-  background: #0050ff;
+  background: #590069a3;
   color: white;
 }
 

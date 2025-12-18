@@ -32,7 +32,7 @@ export default {
 html, body, #app {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 150%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
@@ -46,12 +46,12 @@ html, body, #app {
 .navbar {
   position: sticky;
   top: 0;
-  background: #fff;
-  padding: 20px 40px;
+  background-color: #5900694f;
+  padding: 20px 0px;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #ccc;
-  border-color: black;
+  border-color: rgba(162, 162, 162, 0.808);
 }
 
 .navbar ul {
@@ -59,23 +59,29 @@ html, body, #app {
   gap: 20px;
   list-style: none;
   padding: 0;
-  margin: 0;
-  
+  margin: 10;
+  height: 26px;
 }
 
 .navbar a {
   text-decoration: none;
-  color: blue;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-size: 120%;
+  padding: 24px 48px;
+  border-radius: 40px;
   transition: background 0.2s, color 0.2s;
-  border: 1px solid rgb(0, 25, 252);
+  border: 1px solid rgb(117, 0, 234);
+  
 }
 
-.navbar a:hover,
+.navbar a:hover {
+  background: #5900694f;
+}
+
 .navbar .router-link-active {
-  background: #eee;
+  background: #810097;
+  color: rgb(255, 255, 255);
 }
 
 .main-content {

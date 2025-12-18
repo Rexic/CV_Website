@@ -1,6 +1,8 @@
 <template>
   <section class="projects">
     <h1>Experience</h1>
+    <br/>
+    <br/>
 
     <div class="project-grid">
       <div
@@ -20,8 +22,9 @@
         <!-- Link Button -->
         <div class="links">
           <a :href="project.url" target="_blank" rel="noopener" aria-label="Visit website">
-            Visit Site
+            <svg width="35px" height="35px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#000000" fill="none"><path d="M39.93,55.72A24.86,24.86,0,1,1,56.86,32.15a37.24,37.24,0,0,1-.73,6"/><path d="M37.86,51.1A47,47,0,0,1,32,56.7"/><path d="M32,7A34.14,34.14,0,0,1,43.57,30a34.07,34.07,0,0,1,.09,4.85"/><path d="M32,7A34.09,34.09,0,0,0,20.31,32.46c0,16.2,7.28,21,11.66,24.24"/><line x1="10.37" y1="19.9" x2="53.75" y2="19.9"/><line x1="32" y1="6.99" x2="32" y2="56.7"/><line x1="11.05" y1="45.48" x2="37.04" y2="45.48"/><line x1="7.14" y1="32.46" x2="56.86" y2="31.85"/><path d="M53.57,57,58,52.56l-8-8,4.55-2.91a.38.38,0,0,0-.12-.7L39.14,37.37a.39.39,0,0,0-.46.46L42,53.41a.39.39,0,0,0,.71.13L45.57,49Z"/></svg>  
           </a>
+
         </div>
       </div>
     </div>
@@ -101,7 +104,7 @@ export default {
   background: #fff;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
   display: grid;
   flex-direction: column;
   transition: transform 0.2s ease;
@@ -109,6 +112,7 @@ export default {
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 40px 80px rgba(158, 92, 162, 0.4);
 }
 
 /* Image */
@@ -146,21 +150,23 @@ export default {
 /* Links */
 .links {
   margin-top: 10px;
+  border-radius: 6px;
+  border-color: black;
 }
 
 .links a {
   display: inline-block;
   padding: 6px 12px;
-  background-color: rgb(18, 29, 229);
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
   transition: background 0.2s;
+  background-color: #5900694f;
 }
 
 .links a:hover {
-  background-color: #0aa3c1;
+    background: #590069a3;
 }
 
 /* Modal */
