@@ -32,7 +32,7 @@ export default {
 html, body, #app {
   margin: 0;
   padding: 0;
-  height: 150%;
+  height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
@@ -46,7 +46,7 @@ html, body, #app {
 .navbar {
   position: sticky;
   top: 0;
-  background-color: #5900694f;
+  background-color: #c580d3;
   padding: 20px 0px;
   display: flex;
   justify-content: center;
@@ -65,11 +65,12 @@ html, body, #app {
 
 .navbar a {
   text-decoration: none;
+  z-index: 1000; 
   color: rgb(0, 0, 0);
   font-weight: 900;
   font-size: 120%;
   padding: 24px 48px;
-  border-radius: 40px;
+  border-radius: 20px;
   transition: background 0.2s, color 0.2s;
   border: 1px solid rgb(117, 0, 234);
   
@@ -87,7 +88,7 @@ html, body, #app {
 .main-content {
   flex: 1;
   padding: 40px;
-  max-width: 900px;
+  max-width: 9000px;
   margin: 0 auto;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <section class="projects">
-    <h1>Experience</h1>
+    <h1>My Projects</h1>
     <br/>
     <br/>
 
@@ -88,7 +88,7 @@ export default {
 
 <style scoped>
 .projects {
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 .project-grid {
@@ -158,15 +158,15 @@ export default {
   display: inline-block;
   padding: 6px 12px;
   color: #fff;
-  border-radius: 6px;
+  border-radius: 40px;
   text-decoration: none;
   font-weight: 500;
   transition: background 0.2s;
-  background-color: #5900694f;
 }
 
 .links a:hover {
-    background: #590069a3;
+    background: #c100e36a;
+    border-radius: 40px;
 }
 
 /* Modal */

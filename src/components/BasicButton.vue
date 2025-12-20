@@ -24,14 +24,18 @@ export default {
     }
   },
   methods: {
-    downloadPdf() {
-      const link = document.createElement("a");
-      link.href = "/Liam_Roach_Resume.pdf"; // PDF in public folder
-      link.setAttribute("download", "Liam_Roach_Resume.pdf");
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+downloadPdf() {
+  fetch("/cv.pdf")
+    .then(res => res.blob())
+    .then(blob => {
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Liam_Roach_CV.pdf";
+      a.click();
+      window.URL.revokeObjectURL(url);
+    });
+}
   }
 };
 </script>
