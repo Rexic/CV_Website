@@ -2,8 +2,8 @@
   <div id="app">
     <nav class="navbar">
       <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/workhistory">Work</router-link></li>
+        <li><router-link to="/">About Me</router-link></li>
+        <li><router-link to="/workhistory">Experience</router-link></li>
         <li><router-link to="/contact">Contact</router-link></li>
       </ul>
     </nav>
@@ -46,7 +46,7 @@ html, body, #app {
 .navbar {
   position: sticky;
   top: 0;
-  background-color: #c580d3;
+  background-color: #cb87d9;
   padding: 20px 0px;
   display: flex;
   justify-content: center;

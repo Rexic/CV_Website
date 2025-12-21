@@ -50,7 +50,7 @@ export default {
       projects: [
         {
           title: "Impact Report 2024",
-          description: "Portfolio project showing web development & content skills",
+          description: "A site to highlight the support that St Cuthbert's college received over the year and the impact of that support",
           image: ImpactReport,
           url: "https://impact.stcuthberts.school.nz/",
         },
@@ -62,7 +62,7 @@ export default {
         },
         {
           title: "The Performers Workshop",
-          description: "Showcasing performance training & scheduling site",
+          description: "A site to view and book different performing arts workshops",
           image: PerformersWorkshop,
           url: "https://theperformersworkshop.co.nz/",
         },
