@@ -13,6 +13,19 @@
         <!-- Image -->
         <div class="image-wrapper" @click="openModal(project.image)">
           <img :src="project.image" :alt="project.title" />
+        <div
+          v-if="!project.loaded"
+          class="image-placeholder"
+          ></div>
+
+          <img
+          :src="project.image"
+          :alt="project.title"
+          loading="lazy"
+          decoding="async"
+          @load="project.loaded = true"
+          :class="{visible:project.loaded}"
+          />
         </div>
 
         <!-- Content -->
@@ -53,24 +66,28 @@ export default {
           description: "A site to highlight the support that St Cuthbert's college received over the year and the impact of that support",
           image: ImpactReport,
           url: "https://impact.stcuthberts.school.nz/",
+          loaded:"false",
         },
         {
           title: "OGA Fundraising",
           description: "Fundraising campaign website",
           image: OGA,
           url: "https://ogafundraising.stcuthberts.school.nz/",
+          loaded:"false",
         },
         {
           title: "The Performers Workshop",
           description: "A site to view and book different performing arts workshops",
           image: PerformersWorkshop,
           url: "https://theperformersworkshop.co.nz/",
+          loaded:"false",
         },
         {
           title: "This Website",
           description: "",
           image: VueWebsite,
           url: "",
+          loaded: "false",
         },
       ],
     };
