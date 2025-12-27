@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <h1>{{ msg }}</h1>
+    <h1>Get in Touch</h1>
     <br/>
     For further infomation you can find me here:
     <br /><br /><br /><br />
@@ -67,6 +67,7 @@ export default {
   .contact {
   text-align: center;
   padding: 100px 40px;
+  padding-left: 80px;
 }
 
 .contact h2 {
@@ -101,7 +102,7 @@ export default {
 
 /* Hover effect */
 .contact-icon:hover {
-  background: #e0e0e0;
+  background: #f3e8ff;
   transform: translateY(-2px);
 }
 

@@ -46,43 +46,50 @@ html, body, #app {
 .navbar {
   position: sticky;
   top: 0;
-  background-color: #cb87d9;
-  padding: 20px 0px;
+  z-index: 50;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 0;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #ccc;
-  border-color: rgba(162, 162, 162, 0.808);
 }
 
+/* Container */
 .navbar ul {
   display: flex;
-  gap: 20px;
+  gap: 8px;
   list-style: none;
-  padding: 0;
-  margin: 10;
-  height: 26px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
 }
 
+/* Nav links = pill buttons */
 .navbar a {
   text-decoration: none;
-  z-index: 1000; 
-  color: rgb(0, 0, 0);
-  font-weight: 900;
-  font-size: 120%;
-  padding: 24px 48px;
-  border-radius: 20px;
-  transition: background 0.2s, color 0.2s;
-  border: 1px solid rgb(117, 0, 234);
-  
+  color: #374151; 
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 9999px; 
+  transition: 
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .navbar a:hover {
-  background: #5900694f;
+  background-color: #f3e8ff; 
+  color: #7e22ce; 
 }
 
 .navbar .router-link-active {
-  background: #810097;
-  color: rgb(255, 255, 255);
+  background-color: #9333ea;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.navbar .router-link-active:hover {
+  background-color: #a855f7;
+  color: #ffffff;
 }
 
 .main-content {

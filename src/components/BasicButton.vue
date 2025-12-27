@@ -47,19 +47,23 @@ downloadPdf() {
 }
 
 .basic-button {
-  padding: 10px 20px;
-  border: 2px solid #590069a3;
-  color: #590069a3;
-  background: white;
-  border-radius: 6px;
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #ffffff; 
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 9999px; 
+  background-color: #9333ea;
+  transition: 
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .basic-button:hover {
-  background: #590069a3;
+  background: #a855f7;
   color: white;
+  transform: translateY(-2px);
 }
 
 /* Tooltip */
@@ -68,8 +72,8 @@ downloadPdf() {
   bottom: 120%;
   left: 50%;
   transform: translateX(-50%);
-  background: #333;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   padding: 6px 10px;
   font-size: 12px;
   border-radius: 4px;

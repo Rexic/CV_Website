@@ -1,5 +1,5 @@
 <template>
-<div class="page home">
+<div class="page">
   <!-- Section title -->
   <h1 class="page-title">About Me</h1>
 
@@ -35,13 +35,13 @@
             <li>HTML/CSS</li>
             <li>Vue.js</li>
             <li>WordPress</li>
+            <li>React</li>
           </ul>
         </div>
 
         <div class="skills-column">
           <h3>Back-End/Databasing</h3>
           <ul class="skills-list">
-            <li></li>
             <li>MYSQL</li>
             <li>JavaScript</li>
             <li>Java</li>
@@ -54,14 +54,14 @@
           <ul class="skills-list">
             <li>Git</li>
             <li>Linux Bash Scripting</li>
-            <li>AWS Server Management <br/> using Lightsail + EC2</li>
+            <li>AWS using Lightsail + EC2</li>
+            <li>CI/CD</li>
           </ul>
         </div>
       </div>
     <h3>Downloads</h3>
       <li class="download">
-        <BasicButton 
-          tooltip="Click to download PDF">
+        <BasicButton>
           Download CV as PDF
         </BasicButton>
       </li>
@@ -86,6 +86,7 @@ export default {
 </script>
 
 <style scoped>
+
 .page-title {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -95,6 +96,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-left: 50px;
 }
 .about {
   display: flex;
@@ -118,8 +120,6 @@ export default {
   padding: 15px;
   margin-left: 20px;
   text-align: left;
-  /* border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05); */
 }
 
 .about-text p {
@@ -143,66 +143,72 @@ button {
 }
 
 .downloads {
-  list-style-position: inside;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  text-decoration: none;
+  color: #374151; 
+  font-weight: 500;
+  border-radius: 9999px; 
+  transition: 
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .download {
   display: flex;
   justify-content: center;
 }
-
-.skills-list {
-  list-style: none;
-  margin-left: 20px;
-  
-}
-
 .skills-columns {
   display: flex;
   justify-content: center;
   gap: 60px;
   margin-top: 0;
-  margin-left: 70px;
+  margin-bottom: 20px;
 }
 
 .skills-column {
-  min-width: 180px;
+  min-width: 300px;
+  max-width: 300px;
 }
 
 .skills-column h3 {
-  padding-right: 45px;
+  padding-right: 0px;
   margin-bottom: 12px;
-  text-align: left;
+  text-align: center;
+  color: #7e22ce;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .skills-list {
   list-style: none;
-  padding-left: 0px;
-  margin: 0;
+  margin: 0px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
+
 
 .skills-list li {
   position: relative;
-  padding-left: 18px;
+  padding-left: 25px;
   margin-bottom: 10px;
   text-align: left;
+  left: -20px;
+  padding-top: 5px;
 }
 
 .skills-list li::before {
   content: "";
   position: absolute;
-  left: -5px;
-  top: 0;
-  width: 18px;
-  height: 18px;
+  left: -10px;
+  top: 2px;
+  width: 25px;
+  height: 25px;
+  background-image: url("/src/assets/bulletpoint.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M9 6L15 12L9 18M9 12H9.01' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
 }
 
 
