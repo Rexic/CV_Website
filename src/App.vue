@@ -1,29 +1,49 @@
 <template>
   <div id="app">
-    <nav class="navbar">
-      <ul>
-        <li><router-link to="/">About Me</router-link></li>
-        <li><router-link to="/workhistory">Experience</router-link></li>
-        <li><router-link to="/contact">Contact</router-link></li>
-      </ul>
-    </nav>
+    <!-- Screen too small -->
+    <ScreenSizeWarning v-if="!isDesktop" />
 
-    <!-- <img alt="bugcat" src="./assets/blue-bugcat.gif" /> -->
+    <!-- Normal app -->
+    <div v-else>
+      <nav class="navbar">
+        <ul>
+          <li><router-link to="/">About Me</router-link></li>
+          <li><router-link to="/workhistory">Experience</router-link></li>
+          <li><router-link to="/contact">Contact</router-link></li>
+        </ul>
+      </nav>
 
-    <main class="main-content">
-      <router-view />
-    </main>
+      <main class="main-content">
+        <router-view />
+      </main>
+    </div>
   </div>
 </template>
 
 <script>
 import { RouterLink, RouterView } from 'vue-router'
+import ScreenSizeWarning from '/src/components/ScreenSizeWarning.vue'
 
 export default {
   name: "App",
   components: {
     RouterLink,
-    RouterView
+    RouterView,
+    ScreenSizeWarning
+  },
+  data() {
+    return {
+      isDesktop: window.innerWidth > 1024
+    }
+  },
+  mounted() {
+    this.onResize = () => {
+      this.isDesktop = window.innerWidth > 1024
+    }
+    window.addEventListener('resize', this.onResize)
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.onResize)
   }
 }
 </script>
