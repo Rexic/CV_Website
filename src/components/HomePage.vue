@@ -19,13 +19,12 @@
             the right opportunity.
           </p>
         </div>
-    <img
-      src="\src\assets\profile.JPG"
-      alt="Liam Roach"
-      class="about-image"
-      loading="lazy"
-      decoding="async"
-    />
+          <img
+            :src="profileImg"
+            alt="Liam Roach"
+            class="about-image"
+            loading="lazy"
+          />
       </div>
      <h1>Skills</h1>
       <div class="skills-columns">
@@ -71,11 +70,17 @@
 
 <script>
 import BasicButton from "/src/components/BasicButton.vue";
+import profileImg from "/src/assets/profile.JPG";
 
 export default {
   name: "HomePage",
   components: {
     BasicButton
+  },
+  data() {
+    return {
+      profileImg
+    }
   },
   methods: {
     sayHi() {

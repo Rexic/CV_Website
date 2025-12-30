@@ -66,7 +66,7 @@ export default {
         },
         {
           title: "OGA Fundraising",
-          description: "Fundraising campaign website",
+          description: "Fundraising campaign website that sells umbrellas",
           image: OGA,
           url: "https://ogafundraising.stcuthberts.school.nz/",
           loaded: false,
@@ -79,10 +79,10 @@ export default {
           loaded: false,
         },
         {
-          title: "This Website",
-          description: "",
+          title: "Personal CV Website",
+          description: "A site to show some of my skillset",
           image: VueWebsite,
-          url: "",
+          url: "https://www.hireliamroach.com/",
           loaded: false,
         },
       ],
