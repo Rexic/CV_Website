@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <h1>Get in Touch</h1>
+    <h1>Get In Touch</h1>
     <br/>
     For further infomation you can find me here:
     <br /><br /><br /><br />
