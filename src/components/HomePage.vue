@@ -19,12 +19,12 @@
             the right opportunity.
           </p>
         </div>
-          <img
+          <!-- <img
             :src="profileImg"
             alt="Liam Roach"
             class="about-image"
             loading="lazy"
-          />
+          /> -->
       </div>
      <h1>Skills</h1>
       <div class="skills-columns">
@@ -111,7 +111,7 @@ export default {
   gap: 40px;
   max-width: 900px;
   margin: 0 auto;
-  padding-left: 180px;
+  padding-left: 0px;
 }
 
 .about-image {
@@ -190,7 +190,7 @@ button {
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-  padding-top: 5px;
+  padding-top: 12px;
   padding-bottom: 5px;
 }
 
