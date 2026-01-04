@@ -50,9 +50,9 @@
 </template>
 
 <script>
-import ImpactReport from "/src/assets/Impact_Desc.png";
-import PerformersWorkshop from "/src/assets/PerformersWorkshop.png";
-import OGA from "/src/assets/OGA_Desc.png";
+import ImpactReport from "/src/assets/Impact.jpg";
+import PerformersWorkshop from "/src/assets/Perf.jpg";
+import OGA from "/src/assets/OGA.jpg";
 import VueWebsite from "/src/assets/VueWebsite.png";
 
 export default {
