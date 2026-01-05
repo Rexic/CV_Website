@@ -73,7 +73,7 @@ export default {
 <style scoped>
   .contact {
   text-align: center;
-  padding: 100px 40px;
+  padding: 80px 40px;
   padding-left: 80px;
 }
 

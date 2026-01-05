@@ -50,9 +50,9 @@
 </template>
 
 <script>
-import ImpactReport from "/src/assets/Impact.jpg";
-import PerformersWorkshop from "/src/assets/Perf.jpg";
-import OGA from "/src/assets/OGA.jpg";
+import ImpactReport from "/src/assets/Impact.png";
+import PerformersWorkshop from "/src/assets/Perf.png";
+import OGA from "/src/assets/OGA.png";
 import VueWebsite from "/src/assets/VueWebsite.png";
 
 export default {
@@ -116,7 +116,7 @@ export default {
 
 <style scoped>
 .projects {
-  padding: 100px 20px;
+  padding: 80px 20px;
   padding-left: 60px;
 }
 

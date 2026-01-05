@@ -93,7 +93,7 @@ export default {
 <style scoped>
 
 .page-title {
-  margin-top: 20px;
+  margin-top:0px;
   margin-bottom: 20px;
   text-align: center;
 }
