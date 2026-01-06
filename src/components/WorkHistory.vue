@@ -110,6 +110,17 @@ export default {
       this.$router.push("/");
     }
   },
+    handleKeydown(e){
+      if(e.key === "Escape" && this.activeImage){
+        this.closeModal();
+      }
+    }
+  },
+  mounted() {
+  window.addEventListener("keydown", this.handleKeydown);
+  },
+  beforeUnmount() {
+    window.removeEventListener("keydown", this.handleKeydown);
   },
 };
 </script>
