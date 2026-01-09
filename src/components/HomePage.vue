@@ -7,16 +7,10 @@
   <div class="about">
     <div class="about-text">
           <p>
-            Hi! I'm Liam Roach, a full-stack developer with a proven track record in
-            system administration and web development.
-          </p>
-          <p>
-            I pride myself on my ability to hit the ground running in any environment.
-          </p>
-          <p>
-            I'm currently employed as a System Administrator and Web Technician in
-            Auckland, New Zealand, and am willing to relocate within New Zealand for
-            the right opportunity.
+            Hi! I'm Liam Roach, a full-stack developer with a proven track record in system administration and web development. I'm currently a System Administrator and Web Technician at St Cuthberts College in Auckland.
+            To date I have specialized in front-end user experience and have a vested interested in moving into a full-stack position where I can showcase my full skill-set.
+            I pride myself on my ability to hit the ground running in any environment. With a proven track record for reliably solving challenges on time, I am profound at working under pressure and with high attention to detail.
+            I'm currently employed as a System Administrator and Web Technician in Auckland, New Zealand, and am willing to relocate within New Zealand for the right opportunity.
           </p>
         </div>
           <!-- <img
@@ -58,10 +52,10 @@
           </ul>
         </div>
       </div>
-    <h3>Downloads</h3>
+    <h1>Resume</h1>
       <li class="download">
         <BasicButton>
-          Download CV as PDF
+          Click to download as a PDF
         </BasicButton>
       </li>
   </div>
@@ -109,7 +103,7 @@ export default {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  max-width: 900px;
+  max-width: 1020px;
   margin: 0 auto;
   padding-left: 0px;
 }
@@ -122,9 +116,16 @@ export default {
 }
 
 .about-text {
-  padding: 15px;
-  margin-left: 20px;
-  text-align: left;
+  list-style: none;
+  margin: 0px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  padding-top: 7px;
+  padding-bottom: 13px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 2;
 }
 
 .about-text p {
@@ -135,7 +136,7 @@ export default {
   padding-right: 200px;
 }
 .page {
-  margin-top: 100px;
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   gap: 20px;

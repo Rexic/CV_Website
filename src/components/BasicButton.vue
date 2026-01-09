@@ -31,7 +31,7 @@ downloadPdf() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "Liam_Roach_CV.pdf";
+      a.download = "Liam_Roach_Resume.pdf";
       a.click();
       window.URL.revokeObjectURL(url);
     });
@@ -64,27 +64,5 @@ downloadPdf() {
   background: #a855f7;
   color: white;
   transform: translateY(-2px);
-}
-
-/* Tooltip */
-.tooltip {
-  position: absolute;
-  bottom: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ffffff;
-  color: #000000;
-  padding: 6px 10px;
-  font-size: 12px;
-  border-radius: 4px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.button-wrapper:hover .tooltip {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-4px);
 }
 </style>

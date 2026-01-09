@@ -127,7 +127,7 @@ export default {
 
 <style scoped>
 .projects {
-  padding: 80px 20px;
+  padding: 70px 20px;
   padding-left: 60px;
 }
 
