@@ -37,7 +37,7 @@
         </div>
 
         <div class="skills-column">
-          <h3>Back-End/Databasing</h3>
+          <h3>Back-End / Databasing</h3>
           <ul class="skills-list">
             <li>MYSQL</li>
             <li>JavaScript</li>
