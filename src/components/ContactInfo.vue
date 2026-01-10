@@ -1,7 +1,13 @@
 <template>
   <div class="contact">
     <h1>Get In Touch</h1>
-    <br/>
+    <div class="profile-wrapper">
+      <img
+        src="/src/assets/nature.jpg"
+        alt="Profile picture"
+        class="profile-image"
+      />
+    </div>
     For further infomation you can find me here:
     <br />
     <div class="info">
@@ -163,6 +169,21 @@ a.active {
   stroke: currentColor;
   fill: none;
   flex-shrink: 0;
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 30px;
+}
+
+.profile-image {
+  width: 160px; 
+  height: 220px; 
+  object-fit: cover; 
+  border-radius: 50%;
+  border: 1px solid #eee; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85);
 }
 
 </style>

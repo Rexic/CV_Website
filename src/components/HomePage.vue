@@ -9,6 +9,10 @@
           <p>
             Hi! I'm Liam Roach, a full-stack developer with a proven track record in system administration and web development. I'm currently a System Administrator and Web Technician at St Cuthberts College in Auckland.
             To date I have specialized in front-end user experience and have a vested interested in moving into a full-stack position where I can showcase my full skill-set.
+            
+          
+          </p>
+          <p>
             I pride myself on my ability to hit the ground running in any environment. With a proven track record for reliably solving challenges on time, I am profound at working under pressure and with high attention to detail.
             I'm currently employed as a System Administrator and Web Technician in Auckland, New Zealand, and am willing to relocate within New Zealand for the right opportunity.
           </p>
