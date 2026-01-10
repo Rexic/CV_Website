@@ -63,7 +63,7 @@ export default {
       projects: [
         {
           title: "Impact Report 2024",
-          description: "A site to highlight the support that St Cuthbert's college received over the year and the impact of that support",
+          description: "A site to highlight the support that St Cuthbert's received over the year and the impact of that support",
           image: ImpactReport,
           url: "https://impact.stcuthberts.school.nz/",
           loaded: false,
@@ -71,7 +71,7 @@ export default {
         },
         {
           title: "OGA Fundraising",
-          description: "Fundraising campaign website that sells umbrellas",
+          description: "A site for the Old Girls Association (OGA) fundraising initiative that sells umbrellas for charity",
           image: OGA,
           url: "https://ogafundraising.stcuthberts.school.nz/",
           loaded: false,
@@ -79,7 +79,7 @@ export default {
         },
         {
           title: "The Performers Workshop",
-          description: "A site to view and book different performing arts workshops",
+          description: "A site to view and book different workshops at St Cuthbert's College performing arts center",
           image: PerformersWorkshop,
           url: "https://theperformersworkshop.co.nz/",
           loaded: false,
@@ -87,7 +87,7 @@ export default {
         },
         {
           title: "Personal CV Website",
-          description: "A site to show some of my skillset",
+          description: "A site to showcase some of my skillset implemented in Vue.js and hosted using AWS Lightsail",
           image: VueWebsite,
           url: "https://www.hireliamroach.com/",
           loaded: false,
