@@ -8,7 +8,7 @@
       <nav class="navbar">
         <ul>
           <li><router-link to="/">About Me</router-link></li>
-          <li><router-link to="/workhistory">Experience</router-link></li>
+          <li><router-link to="/projects">My Projects</router-link></li>
           <li><router-link to="/contact">Contact</router-link></li>
         </ul>
       </nav>
@@ -82,6 +82,7 @@ html, body, #app {
   padding-top: 10px;
   padding-bottom: 10px;
   margin: 0;
+  padding-right: 40px;
 }
 
 /* Nav links = pill buttons */

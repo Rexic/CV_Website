@@ -128,7 +128,6 @@ export default {
 <style scoped>
 .projects {
   padding: 70px 20px;
-  padding-left: 60px;
 }
 
 .project-grid {
@@ -143,7 +142,6 @@ export default {
 .project-card {
   background: #fff;
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
   display: grid;
   flex-direction: column;
