@@ -1,12 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from '../components/HomePage.vue'
-import WorkHistory from '../components/WorkHistory.vue'
+import AboutPage from '../components/HomePage.vue'
+import Projects from '../components/WorkHistory.vue'
 import ContactMe from '../components/ContactInfo.vue'
 import NotFound from '../components/NotFound.vue'
 
 const routes = [
-  { path: '/', component: HomePage },
-  { path: '/projects', component: WorkHistory },
+  { path: '/aboutme', component: AboutPage },
+  {
+    path: '/',
+    redirect: '/myprojects'
+  },
+  { path: '/myprojects', component: Projects },
   { path: '/contact', component: ContactMe },
   { path: '/:pathMatch(.*)*', component: NotFound },
 ]

@@ -78,9 +78,9 @@ export default {
 
 <style scoped>
   .contact {
+  padding: clamp(2rem, 8vh, 4rem) 5%;
   text-align: center;
-  padding: 70px 40px;
-  padding-left: 80px;
+
 }
 
 .contact h2 {

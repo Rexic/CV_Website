@@ -8,9 +8,7 @@
     <div class="about-text">
           <p>
             Hi! I'm Liam Roach, a full-stack developer with a proven track record in system administration and web development. I'm currently a System Administrator and Web Technician at St Cuthberts College in Auckland.
-            To date I have specialized in front-end user experience and have a vested interested in moving into a full-stack position where I can showcase my full skill-set.
-            
-          
+            To date I have mostly specialized in front-end user experience and have a vested interested in moving into a full-stack position where I can showcase my full skill-set.
           </p>
           <p>
             I pride myself on my ability to hit the ground running in any environment. With a proven track record for reliably solving challenges on time, I am profound at working under pressure and with high attention to detail.
@@ -24,7 +22,7 @@
             loading="lazy"
           /> -->
       </div>
-     <h1>Skills</h1>
+     <h1 class="titles">Skills</h1>
       <div class="skills-columns">
         <div class="skills-column">
           <h3 >Front-End</h3>
@@ -56,7 +54,7 @@
           </ul>
         </div>
       </div>
-    <h1>Resume</h1>
+    <h1 class="titles">Resume</h1>
       <li class="download">
         <BasicButton>
           Click to download as a PDF
@@ -91,15 +89,18 @@ export default {
 <style scoped>
 
 .page-title {
-  margin-top:0px;
   margin-bottom: 20px;
   text-align: center;
 }
 .page {
+  /* margin-top: 90px; <--- Remove this */
+  padding: clamp(2rem, 8vh, 4rem) 5%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-left: 50px;
+  text-align: center;
+  max-width: 1400px; /* Better for 2K readability than 1600px */
+  margin: 0 auto;
 }
 .about {
   display: flex;
@@ -137,14 +138,7 @@ export default {
 }
 .about-text h1{
   text-align: left;
-  padding-right: 200px;
-}
-.page {
-  margin-top: 90px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: center;
+  padding-right: 0;
 }
 button {
   padding: 8px 16px;
@@ -197,6 +191,7 @@ button {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
   padding-top: 12px;
   padding-bottom: 5px;
+  padding-left: 30px;
 }
 
 
@@ -205,7 +200,7 @@ button {
   padding-left: 25px;
   margin-bottom: 10px;
   text-align: left;
-  left: -20px;
+  padding-left: 30px;
   padding-top: 5px;
 }
 
@@ -219,6 +214,10 @@ button {
   background-image: url("/src/assets/bulletpoint.svg");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.titles{
+  margin-top: 60px;
 }
 
 

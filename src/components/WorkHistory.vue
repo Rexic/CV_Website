@@ -1,7 +1,7 @@
 <template>
   <section class="projects">
     <h1>My Projects</h1>
-    <br/>
+    <h3>Hi! Here's a collection of my professional projects :)</h3>
     <br/>
 
     <div class="project-grid">
@@ -107,7 +107,7 @@ export default {
     if (project.newTab) {
       window.open(project.url, "_blank", "noopener");
     } else {
-      this.$router.push("/");
+      this.$router.push("/about");
     }
   },
     handleKeydown(e){
@@ -127,15 +127,19 @@ export default {
 
 <style scoped>
 .projects {
-  padding: 70px 20px;
+  padding: clamp(2rem, 8vh, 4rem) 5%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.projects h1{
+  padding: 10px;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1800px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
 }
 
 /* Card */
@@ -194,18 +198,19 @@ export default {
 
 .links a {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 4px 8px;
   color: #000000;
-  border-radius: 40px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
   transition: background 0.2s;
+  margin-bottom: 2px;
 }
 
 .links a:hover {
     color: #7e22ce;
     background: #f3e8ff;
-    border-radius: 40px;
+    border-radius: 30px;
 }
 
 /* Modal */

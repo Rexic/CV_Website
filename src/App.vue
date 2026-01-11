@@ -7,8 +7,8 @@
     <div v-else>
       <nav class="navbar">
         <ul>
-          <li><router-link to="/">About Me</router-link></li>
-          <li><router-link to="/projects">My Projects</router-link></li>
+          <li><router-link to="/myprojects">My Projects</router-link></li>
+          <li><router-link to="/aboutme">About Me</router-link></li>
           <li><router-link to="/contact">Contact</router-link></li>
         </ul>
       </nav>
@@ -69,33 +69,52 @@ html, body, #app {
   z-index: 50;
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
-  padding: 16px 0;
+  padding: 12px 0;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
-/* Container */
 .navbar ul {
-  display: flex;
-  gap: 8px;
   list-style: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
   margin: 0;
-  padding-right: 40px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; 
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
 }
 
-/* Nav links = pill buttons */
+/* 1. Left Button (My Projects) */
+.navbar li:nth-child(1) {
+  justify-self: end; 
+  margin-right: 10px;
+}
+
+/* 2. Center Button (About Me) */
+.navbar li:nth-child(2) {
+  justify-self: center;
+}
+
+/* 3. Right Button (Contact) */
+.navbar li:nth-child(3) {
+  justify-self: start;
+  margin-left: 10px;
+}
+
 .navbar a {
+  display: inline-block;
+  padding: 10px 10px;
+  text-align: center;
   text-decoration: none;
-  color: #374151; 
+  color: #374151;
   font-weight: 500;
-  padding: 10px 20px;
-  border-radius: 9999px; 
-  transition: 
-    background-color 0.2s ease,
-    color 0.2s ease,
-    box-shadow 0.2s ease;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  border-radius: 9999px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  min-width: 110px; 
 }
 
 .navbar a:hover {
@@ -103,11 +122,13 @@ html, body, #app {
   color: #7e22ce; 
 }
 
+
+/* Active State */
 .navbar .router-link-active {
   background-color: #9333ea;
   color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
 .navbar .router-link-active:hover {
   background-color: #a855f7;
   color: #ffffff;
