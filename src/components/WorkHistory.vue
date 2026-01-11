@@ -23,7 +23,7 @@
             :class="{ visible: project.loaded }"
           />
         </div>
-
+        <!-- TODO Arrow keys to move between images -->
         <!-- Content -->
         <h3>{{ project.title }}</h3>
         <p>{{ project.description }}</p>
@@ -107,7 +107,7 @@ export default {
     if (project.newTab) {
       window.open(project.url, "_blank", "noopener");
     } else {
-      this.$router.push("/about");
+      this.$router.push("/aboutme");
     }
   },
     handleKeydown(e){
