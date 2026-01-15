@@ -56,7 +56,7 @@
       class="nav-arrow right"
       @click.stop="nextProject"
       :disabled="activeIndex === projects.length - 1"
-      >>
+      >
       ›
     </button>
     <img
