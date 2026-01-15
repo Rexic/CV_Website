@@ -6,6 +6,8 @@
         src="/src/assets/nature.jpg"
         alt="Profile picture"
         class="profile-image"
+        loading="lazy"
+        decoding="async"
       />
     </div>
     For further infomation you can find me here:
@@ -80,7 +82,6 @@ export default {
   .contact {
   padding: clamp(2rem, 8vh, 4rem) 5%;
   text-align: center;
-
 }
 
 .contact h2 {

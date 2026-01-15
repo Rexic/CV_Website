@@ -6,12 +6,12 @@
 
     <div class="project-grid">
       <div
-        v-for="project in projects"
+        v-for="(project, index) in projects"
         :key="project.title"
         class="project-card"
       >
         <!-- Image -->
-        <div class="image-wrapper" @click="openModal(project.image)">
+        <div class="image-wrapper" @click="openModalByIndex(index)">
           <div v-if="!project.loaded" class="image-placeholder"></div>
 
           <img
@@ -23,7 +23,7 @@
             :class="{ visible: project.loaded }"
           />
         </div>
-        <!-- TODO Arrow keys to move between images -->
+        <!-- TODO Arrow keys to move between images maybe interactable arrows also-->
         <!-- Content -->
         <h3>{{ project.title }}</h3>
         <p>{{ project.description }}</p>
@@ -43,9 +43,27 @@
     </div>
 
     <!-- Modal -->
-    <div v-if="activeImage" class="modal" @click.self="closeModal">
-      <img :src="activeImage" alt="Project preview" />
-    </div>
+  <div v-if="activeIndex !== null" class="modal" @click.self="closeModal">
+    <!--Arrows on sides of model-->
+    <button
+      class="nav-arrow left"
+      @click.stop="prevProject"
+      :disabled="activeIndex === 0"
+    >
+      ‹
+    </button>
+    <button
+      class="nav-arrow right"
+      @click.stop="nextProject"
+      :disabled="activeIndex === projects.length - 1"
+      >>
+      ›
+    </button>
+    <img
+      :src="projects[activeIndex].image"
+      :alt="projects[activeIndex].title"
+    />
+  </div>
   </section>
 </template>
 
@@ -59,6 +77,7 @@ export default {
   name: "WorkHistory",
   data() {
     return {
+      activeIndex: null,
       activeImage: null,
       projects: [
         {
@@ -97,11 +116,11 @@ export default {
     };
   },
   methods: {
-    openModal(image) {
-      this.activeImage = image;
+    openModalByIndex(index) {
+      this.activeIndex = index;
     },
     closeModal() {
-      this.activeImage = null;
+      this.activeIndex = null;
     },
      handleProjectClick(project) {
     if (project.newTab) {
@@ -110,11 +129,33 @@ export default {
       this.$router.push("/aboutme");
     }
   },
-    handleKeydown(e){
-      if(e.key === "Escape" && this.activeImage){
-        this.closeModal();
-      }
+
+  nextProject() {
+    if (this.activeIndex < this.projects.length - 1) {
+      this.activeIndex++;
     }
+  },
+  prevProject() {
+    if (this.activeIndex > 0) {
+      this.activeIndex--;
+    }
+  },
+
+  handleKeydown(e) {
+    if (this.activeIndex !== null) {
+      if (e.key === "Escape") this.closeModal();
+      if (e.key === "ArrowRight") this.nextProject();
+      if (e.key === "ArrowLeft") this.prevProject();
+    }
+  },
+
+  handleProjectClick(project) {
+    if (project.newTab) {
+      window.open(project.url, "_blank", "noopener");
+    } else {
+      this.$router.push("/aboutme");
+    }
+  }
   },
   mounted() {
   window.addEventListener("keydown", this.handleKeydown);
@@ -228,5 +269,37 @@ export default {
   max-width: 90%;
   max-height: 90%;
   border-radius: 12px;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.nav-arrow:hover:not(:disabled) {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.nav-arrow.left {
+  left: 2rem;
+}
+
+.nav-arrow.right {
+  right: 2rem;
 }
 </style>
